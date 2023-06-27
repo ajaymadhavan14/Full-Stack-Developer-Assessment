@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const HeaderSection = () => {
   const [headerData, setHeaderData] = useState({
     vr_no: 0,
     vr_date: new Date().toISOString().slice(0, 10),
-    ac_name: '',
+    ac_name: "",
     ac_amt: 0,
-    status: 'A'
+    status: "A",
   });
 
   const handleChange = (field, value) => {
@@ -27,7 +27,7 @@ const HeaderSection = () => {
             name="vr_no"
             className="w-full px-4 py-2 border border-gray-300 rounded"
             value={headerData.vr_no}
-            onChange={(e) => handleChange('vr_no', parseInt(e.target.value))}
+            onChange={(e) => handleChange("vr_no", parseInt(e.target.value))}
             required
           />
         </div>
@@ -41,7 +41,7 @@ const HeaderSection = () => {
             name="vr_date"
             className="w-full px-4 py-2 border border-gray-300 rounded"
             value={headerData.vr_date}
-            onChange={(e) => handleChange('vr_date', e.target.value)}
+            onChange={(e) => handleChange("vr_date", e.target.value)}
             required
           />
         </div>
@@ -55,7 +55,7 @@ const HeaderSection = () => {
             name="ac_name"
             className="w-full px-4 py-2 border border-gray-300 rounded"
             value={headerData.ac_name}
-            onChange={(e) => handleChange('ac_name', e.target.value)}
+            onChange={(e) => handleChange("ac_name", e.target.value)}
             required
           />
         </div>
@@ -72,7 +72,7 @@ const HeaderSection = () => {
             className="w-full px-4 py-2 border border-gray-300 rounded"
             step="0.01"
             value={headerData.ac_amt}
-            onChange={(e) => handleChange('ac_amt', parseFloat(e.target.value))}
+            onChange={(e) => handleChange("ac_amt", parseFloat(e.target.value))}
             required
           />
         </div>
@@ -85,7 +85,7 @@ const HeaderSection = () => {
             name="status"
             className="w-full px-4 py-2 border border-gray-300 rounded"
             value={headerData.status}
-            onChange={(e) => handleChange('status', e.target.value)}
+            onChange={(e) => handleChange("status", e.target.value)}
             required
           >
             <option value="A">Active</option>

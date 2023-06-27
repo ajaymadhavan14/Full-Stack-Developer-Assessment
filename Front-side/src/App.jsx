@@ -1,12 +1,11 @@
-import SalesEntryForm from './Pages/SalesEntryForm'
+import SalesEntryForm from "./Pages/SalesEntryForm";
 
 function App() {
-
   return (
     <>
-     <SalesEntryForm />
+      <SalesEntryForm />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

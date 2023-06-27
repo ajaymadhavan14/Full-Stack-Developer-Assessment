@@ -1,23 +1,20 @@
-import mysql from 'mysql2'
+import mysql from "mysql2";
 
 const connection = mysql.createConnection({
-    host: 'localhost',     
-    user: 'root', 
-    password: '123456789', 
-    database: 'newtable'  
-  });
-  
-  
+  host: "localhost",
+  user: "root",
+  password: "123456789",
+  database: "newtable",
+});
 
-  connection.connect((err) => {
+connection.connect((err) => {
   if (err) {
-    console.error('Error connecting to MySQL database:', err);
+    console.error("Error connecting to MySQL database:", err);
     return;
   }
 
-  console.log('Connected to MySQL database!');
+  console.log("Connected to MySQL database!");
 });
-
 
 // const insertDataQuery = `CREATE TABLE header_table (
 //     vr_no numeric(18) PRIMARY KEY,
@@ -63,7 +60,6 @@ const connection = mysql.createConnection({
 //        (124, 1, '003', 'Item 3', 'Description 3', 8.75, 12.99)
 // `;
 
-
 // connection.query(insertDataQuery, (err) => {
 //   if (err) {
 //     console.error('Error inserting data:', err);
@@ -73,14 +69,13 @@ const connection = mysql.createConnection({
 //   console.log('Data inserted successfully!');
 // });
 
-const selectDataQuery = 'SELECT * FROM detail_table';
+const selectDataQuery = "SELECT * FROM detail_table";
 
 connection.query(selectDataQuery, (err, results) => {
   if (err) {
-    console.error('Error retrieving data:', err);
+    console.error("Error retrieving data:", err);
     return;
   }
 
-  console.log('Data retrieved:', results);
+  console.log("Data retrieved:", results);
 });
-  
