@@ -1,4 +1,5 @@
 import mysql from "mysql2";
+import express from "express";
 
 const connection = mysql.createConnection({
   host: "localhost",
