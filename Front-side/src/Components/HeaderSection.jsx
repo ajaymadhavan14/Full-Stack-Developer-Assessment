@@ -12,6 +12,7 @@ const HeaderSection = () => {
 
   const handleChange = (field, value) => {
     setHeaderData({ ...headerData, [field]: value });
+    console.log(headerData);
   };
 
   return (

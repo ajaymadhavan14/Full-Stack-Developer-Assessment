@@ -23,7 +23,6 @@ const DetailSection = () => {
       rate: "",
     };
     setRows([...rows, newRow]);
-    console.log(rows);
   };
 
   const handleRemoveRow = (index) => {
@@ -36,7 +35,6 @@ const DetailSection = () => {
     const updatedRows = [...rows];
     updatedRows[index][field] = value;
     setRows(updatedRows);
-    console.log("aaaaaaaaa");
   };
 
   return (
